@@ -1,9 +1,24 @@
 "use strict";
 
-let userChoice = confirm("Ты долбоеб и чо хуй?")
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
 
-if (userChoice == true) {
-    window.location.href = "https://www.dream-singles.com/";
-} else {
-    alert("Ну и чо хуй");
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {
+
+    },
+    actors: {
+
+    },
+    genres: [ ],
+    privat: false
 }
+
+let firstMovieName = prompt("Один из последних просмотренных фильмов?");
+let firstMovieReview = prompt("На сколько вы его оцените?")
+
+let secondMovieName = prompt("Один из последних просмотренных фильмов?");
+let secondMovieReview = prompt("На сколько вы его оцените?")
+
+personalMovieDB.movies[firstMovieName] = firstMovieReview;
+personalMovieDB.movies[secondMovieName] = secondMovieReview;
